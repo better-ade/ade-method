@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.0
+
+- Rule: AI attribution in commits and PRs follows the project's setting (`HUB_AI_ATTRIBUTION`; off unless the owner turns it on), instead of the fixed "no AI attribution" (owner decision 2026-11-23).
+- `scripts/validate.mjs` checks that the rule names the setting.
+
 ## 2.1.0
 
 - Rule: every commit and PR has the standard shape (overview, implementation, verification, Definition of Done checklist, related).

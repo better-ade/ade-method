@@ -44,5 +44,9 @@ if (reg && typeof reg === "object") {
     }
   }
 }
+// the attribution rule names the project's setting (owner decision 2026-11-23), never a fixed "no AI attribution"
+if (reg?.rules && existsSync(join(ROOT, reg.rules)) && !read(join(ROOT, reg.rules)).replace(/\s+/g, " ")
+  .includes("**Commit as the user.** AI attribution in commits and PRs follows the project's setting (`HUB_AI_ATTRIBUTION`; off unless the owner turns it on)."))
+  fail(reg.rules, 'the "Commit as the user" rule must name the project\'s setting, HUB_AI_ATTRIBUTION');
 if (problems.length) { console.error(problems.join("\n")); process.exit(1); }
 console.log(`ok: ${reg.core_roles.length} core roles`);
