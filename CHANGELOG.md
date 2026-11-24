@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Specialists come from ade-agent-registry v1.1.0 (adds `forward-deployed`), the tag ade-cli already reads.
+
 ## 2.2.0
 
 - Rule: AI attribution in commits and PRs follows the project's setting (`HUB_AI_ATTRIBUTION`; off unless the owner turns it on), instead of the fixed "no AI attribution" (owner decision 2026-11-23).

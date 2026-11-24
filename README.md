@@ -19,7 +19,7 @@ scripts/validate.mjs   the check this repo must pass: node scripts/validate.mjs
 
 **Specialists** (frontend, backend, devops, sysadmin, security-reviewer, qa, analyst, monitor, support, and from
 registry v1.1.0 forward-deployed) live in [ade-agent-registry](https://github.com/better-ade/ade-agent-registry),
-pinned in `ade.json` (v1.0.0), and load only when a task needs one; `ade agent` reads the tag ade pins (v1.1.0).
+pinned in `ade.json` (v1.1.0, the same tag `ade agent` reads), and load only when a task needs one.
 **Skills and MCP servers** live in [ade-skills](https://github.com/better-ade/ade-skills).
 
 Where it fits: [ade](https://github.com/better-ade/ade-cli) is the command, [ade-brain](https://github.com/better-ade/ade-brain)

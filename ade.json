@@ -26,7 +26,7 @@
   ],
   "specialists": {
     "repo": "https://github.com/better-ade/ade-agent-registry",
-    "ref": "v1.0.0",
+    "ref": "v1.1.0",
     "index": "registry.json"
   },
   "bmad": {
