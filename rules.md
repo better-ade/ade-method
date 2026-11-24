@@ -25,7 +25,8 @@ that must pass for work to be Done.
   Anyone records a contract they establish there, in a small factual file; the architect owns the decision records
   (`.ade/context/decisions/`) and settles conflicts.
 - **Stay in your lane.** Each role owns the artifacts listed in its role file.
-- **Commit as the user.** No AI attribution in commits or PRs.
+- **Commit as the user.** AI attribution in commits and PRs follows the project's setting (`HUB_AI_ATTRIBUTION`; off
+  unless the owner turns it on).
 - **Every commit and PR has the standard shape:** Overview, Implementation details, Verification (the real output and
   who ran it, plus the review done for the risk), a Definition of Done checklist, and Related (story or ticket, PRs,
   issues, ADRs). Templates: `.github/pull_request_template.md` and `.ade/commit-template.txt` (`git config
