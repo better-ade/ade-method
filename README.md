@@ -12,20 +12,32 @@ agents/           the core roles, provider-neutral Markdown, no front matter:
 ade.json          what ADE reads: the core roles, the pinned specialist registry and BMAD commit, and the BMAD skills
                   a project gets by default, on demand, or never
 bmad/custom/      overrides for BMAD v6 skills (copied into a project's _bmad/custom/)
-templates/        the context store, decision log, role knowledge and coding standards a project starts with
+templates/        the context store, decision log, role knowledge, coding standards, and the PR and commit
+                  templates a project starts with
 scripts/validate.mjs   the check this repo must pass: node scripts/validate.mjs
 ```
 
-**Specialists** (frontend, backend, devops, sysadmin, qa, security-reviewer, analyst, monitor, support) live in
+**Specialists** (frontend, backend, devops, sysadmin, security-reviewer, qa, analyst, monitor, support,
+forward-deployed) live in
 [ade-agent-registry](https://github.com/better-ade/ade-agent-registry), pinned in `ade.json`, and load only when a task
 needs one. **Skills and MCP servers** live in [ade-skills](https://github.com/better-ade/ade-skills).
 
+Where it fits: [ade](https://github.com/better-ade/ade-cli) is the command, [ade-brain](https://github.com/better-ade/ade-brain)
+the hub, ade-method (this repo) the rules, [ade-skills](https://github.com/better-ade/ade-skills) the skills,
+[ade-secrets](https://github.com/better-ade/ade-secrets) the keys, [ade-terminal](https://github.com/better-ade/ade-terminal)
+the desktop app, and [ade-computer](https://github.com/better-ade/ade-computer) an isolated desktop to run it in. More
+at [ade.ardata.tech](https://ade.ardata.tech/).
+
 ## Using it
 
-ADE vendors this repo at a pinned tag:
+A project gets this repo at a pinned tag with [`ade init`](https://github.com/better-ade/ade-cli), run in the project.
+It copies `rules.md` to `.ade/rules.md`, the core roles to `.ade/agents/`, `bmad/custom/` to `_bmad/custom/`, the
+context store to `.ade/context/`, `templates/standards.md` to `docs/standards.md` and the `install_templates` in
+`ade.json`; it never overwrites a file you have, and records the tag in `.ade/method-version`.
 
-```json
-{ "agentConfig": { "repo": "git@github.com:better-ade/ade-method.git", "ref": "v2.0.0" } }
+```bash
+ade init                          # the tag ade pins (ade 0.2.8: v2.1.0)
+ADE_METHOD_REF=v2.2.0 ade init    # the latest release
 ```
 
 ## Migrating from v1
