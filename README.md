@@ -17,10 +17,9 @@ templates/        the context store, decision log, role knowledge, coding standa
 scripts/validate.mjs   the check this repo must pass: node scripts/validate.mjs
 ```
 
-**Specialists** (frontend, backend, devops, sysadmin, security-reviewer, qa, analyst, monitor, support,
-forward-deployed) live in
-[ade-agent-registry](https://github.com/better-ade/ade-agent-registry), pinned in `ade.json`, and load only when a task
-needs one. **Skills and MCP servers** live in [ade-skills](https://github.com/better-ade/ade-skills).
+**Specialists** (frontend, backend, devops, sysadmin, security-reviewer, qa, analyst, monitor, support, and from
+registry v1.1.0 forward-deployed) live in [ade-agent-registry](https://github.com/better-ade/ade-agent-registry),
+pinned in `ade.json` (v1.0.0), and load only when a task needs one; `ade agent` reads the tag ade pins (v1.1.0). **Skills and MCP servers** live in [ade-skills](https://github.com/better-ade/ade-skills).
 
 Where it fits: [ade](https://github.com/better-ade/ade-cli) is the command, [ade-brain](https://github.com/better-ade/ade-brain)
 the hub, ade-method (this repo) the rules, [ade-skills](https://github.com/better-ade/ade-skills) the skills,
