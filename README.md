@@ -36,8 +36,8 @@ context store to `.ade/context/`, `templates/standards.md` to `docs/standards.md
 `ade.json`; it never overwrites a file you have, and records the tag in `.ade/method-version`.
 
 ```bash
-ade init                          # the tag ade pins (ade 0.2.8: v2.1.0)
-ADE_METHOD_REF=v2.2.0 ade init    # the latest release
+ade init                          # the tag ade pins (ade 0.2.16: v2.2.0, the latest release)
+ADE_METHOD_REF=v2.1.0 ade init    # another tag
 ```
 
 ## Migrating from v1
